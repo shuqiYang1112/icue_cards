@@ -1,2 +1,6 @@
-# comp3004_project
- Description to be added soon once a project has been decided on :D
+# icue_cards
+We are developing a mobile application for students to help them study, ace their midterms and exams, and raise their ICUE (IQ)! Cue cards (also called flashcards) are an effective learning and memorization tool that works. They are easy to create, are far more portable than a textbook or laptop, and improve memory retention through repetition and active recall.
+
+Our project, ICUE CARDS, is a mobile application that allows users to create, manage, and solidify their knowledge using cue cards with a deliberate emphasis on having fun while learning. ICUE CARDS will feature several multiplayer game modes that are played using the user's own deck of cue cards with inspiration taken from successful mobile games including Heads Up!, Kahoot!, and Fibbage. We believe that the addition of a gaming element with friends turns an otherwise tedious and mundane study preparation into one that is fun, interactive, and just as if not more effective.
+
+The mobile form factor of our product achieves the convenience of being able to easily create cue cards on the go without pen and paper. The app can taken out during a long bus or train ride to school to give a student a quick, comprehensive review of the material before a tough midterm or final. The games that will be featured in ICUE CARDS will be intuitive and familiar to play in mobile form as they are based on existing mobile games on the platform.
