@@ -1,7 +1,15 @@
+/* Sign into ICUE CARDS  
+   Author: Andy Tran
+*/
+
 import 'package:flutter/material.dart';
-import 'package:icue_cards/services/auth.dart';
+
+import '../../services/auth.dart';
 
 class SignIn extends StatefulWidget {
+  // This SignIn() widget accepts a toggleView function
+  // Needed later so we can switch to the Register page when the user clicks
+  // the Register icon
   final Function toggleView;
   SignIn({this.toggleView});
 
@@ -11,48 +19,49 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
   final AuthService _auth = AuthService();
-  final _formKey = GlobalKey<FormState>();
+
   // text field state
   String email = '';
   String password = '';
-  String error = '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
-          backgroundColor: Colors.brown[400],
-          elevation: 0.0, // no drop shadow
-          title: Text("Sign in to iCue Cards"),
-          actions: <Widget>[
-            FlatButton.icon(
-                icon: Icon(Icons.person),
-                label: Text('Register'),
-                onPressed: () {
-                  widget.toggleView();
-                })
-          ]),
+        backgroundColor: Colors.brown[400],
+        elevation: 0.0,
+        title: Text('Sign in to ICUE CARDS'),
+        actions: <Widget>[
+          FlatButton.icon(
+              icon: Icon(Icons.person),
+              label: Text('Register'),
+              onPressed: () {
+                widget.toggleView();
+              }),
+        ],
+      ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
         child: Form(
-          key: _formKey,
           child: Column(
             children: <Widget>[
+              // Enter email field
               SizedBox(height: 20.0),
               TextFormField(
-                  validator: (val) => val.isEmpty ? 'Enter an email' : null,
+                  // val represents whatever is in the form field
                   onChanged: (val) {
-                    setState(() => email = val);
-                  }),
+                setState(() => email = val);
+              }),
+              // Enter Password field
               SizedBox(height: 20.0),
               TextFormField(
+                  // turns text into dots
                   obscureText: true,
-                  validator: (val) =>
-                      val.length < 6 ? 'Enter a password 6+ chars long' : null,
                   onChanged: (val) {
                     setState(() => password = val);
                   }),
+              // Sign in button
               SizedBox(height: 20.0),
               RaisedButton(
                   color: Colors.pink[400],
@@ -61,20 +70,9 @@ class _SignInState extends State<SignIn> {
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () async {
-                    if (_formKey.currentState.validate()) {
-                      dynamic result = await _auth.signInWithEmailAndPassword(
-                          email, password);
-                      if (result == null) {
-                        setState(() =>
-                            error = 'Could not sign in with those credentials');
-                      }
-                    }
+                    print(email);
+                    print(password);
                   }),
-              SizedBox(height: 12.0),
-              Text(
-                error,
-                style: TextStyle(color: Colors.red, fontSize: 14.0),
-              ),
             ],
           ),
         ),

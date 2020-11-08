@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/andy/Fall_2020/ogre_fanclub/icue_cards/icue_cards/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/andy/Fall_2020/ogre_fanclub/icue_cards/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/andy/Fall_2020/ogre_fanclub/icue_cards/icue_cards/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/andy/Fall_2020/ogre_fanclub/icue_cards/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

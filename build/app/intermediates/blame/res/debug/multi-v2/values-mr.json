@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/andy/Fall_2020/ogre_fanclub/icue_cards/icue_cards/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-mr/values-mr.xml",
+            "outputFile": "/Users/andy/Fall_2020/ogre_fanclub/icue_cards/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-mr/values-mr.xml",
             "map": [
                 {
                     "source": "/Users/andy/.gradle/caches/transforms-2/files-2.1/dfda874e59ae708b9dea8d783cda1c4f/play-services-base-17.0.0/res/values-mr/values.xml",
